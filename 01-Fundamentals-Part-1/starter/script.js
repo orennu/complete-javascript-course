@@ -11,7 +11,6 @@ console.log(firstName);
 console.log(firstName);
 */
 
-<<<<<<< Updated upstream
 /*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
@@ -45,7 +44,6 @@ const birthYear = 1980;
 // birthYear = 1990;
 
 const job;
-=======
 // math operators
 const now = 2021;
 const ageOren = now - 1980;
@@ -71,4 +69,3 @@ console.log(x);
 
 // comparison operators
 console.log(ageValery > ageOren);
->>>>>>> Stashed changes
