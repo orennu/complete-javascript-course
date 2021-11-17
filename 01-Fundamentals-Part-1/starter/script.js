@@ -35,15 +35,19 @@ console.log(nul);
 console.log(typeof nul);
 */
 
+/*
 let age = 30;
 age = 31;
 
 console.log(age);
 
 const birthYear = 1980;
-// birthYear = 1990;
+// birthYear = 1990; // error
 
-const job;
+const job; // error
+*/
+
+/*
 // math operators
 const now = 2021;
 const ageOren = now - 1980;
@@ -52,20 +56,42 @@ const ageValery = now - 1977;
 console.log(ageOren, ageValery);
 console.log(ageOren * 2, ageOren / 10, 2 ** 3);
 
+// + operator can also be used to concatenate strings
 const firstName = "Oren";
 const lastName = "Nudelman";
 
 console.log(firstName + " " + lastName);
 
 // assignment operators
-let x = 10 + 5; // 15
-x += 10; // x = x + 10
-x *= 4 // x = x * 4
-x++; // x = x + 1;
-x--;
-x--;
+let x = 10 + 5; // the equal operator // 15
+x += 10; // x = x + 10 // 25
+x *= 4 // x = x * 4 // 100
+x++; // x = x + 1 // 101
+x--; // x = x - 1 // 100
+x--; // 99
 
 console.log(x);
 
 // comparison operators
 console.log(ageValery > ageOren);
+console.log(ageOren >= 18);
+
+const isLegalAge = ageOren >= 18;
+*/
+
+const now = 2021;
+const ageOren = now - 1980;
+const ageValery = now - 1977;
+
+console.log(now - 1980 > now - 1977);
+
+// math opertors operate left to right
+console.log(25 - 10 - 5);
+
+// assignment operator operate right to left
+let x, y;
+x = y = 28 - 9 - 7; // x = y = 12 => y = 12 => x = y
+console.log(x, y);
+
+const averageAge = (ageOren + ageValery) / 2;
+console.log(ageOren, ageValery, averageAge);
