@@ -11,6 +11,7 @@ console.log(firstName);
 console.log(firstName);
 */
 
+<<<<<<< Updated upstream
 /*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
@@ -44,3 +45,30 @@ const birthYear = 1980;
 // birthYear = 1990;
 
 const job;
+=======
+// math operators
+const now = 2021;
+const ageOren = now - 1980;
+const ageValery = now - 1977;
+
+console.log(ageOren, ageValery);
+console.log(ageOren * 2, ageOren / 10, 2 ** 3);
+
+const firstName = "Oren";
+const lastName = "Nudelman";
+
+console.log(firstName + " " + lastName);
+
+// assignment operators
+let x = 10 + 5; // 15
+x += 10; // x = x + 10
+x *= 4 // x = x * 4
+x++; // x = x + 1;
+x--;
+x--;
+
+console.log(x);
+
+// comparison operators
+console.log(ageValery > ageOren);
+>>>>>>> Stashed changes
