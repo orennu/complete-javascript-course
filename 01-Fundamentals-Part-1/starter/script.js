@@ -120,3 +120,23 @@ multi
 line`);
 */
 
+
+const age = 15;
+
+if (age >= 18) {
+    console.log("Sarah can start driving license 😄")
+} else {
+    const yearsLeftForLicense = 18 - age;
+    console.log(`Sarah has ${yearsLeftForLicense} years left for license 😩`)
+}
+
+const birthYear = 1980;
+let century;
+
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+
+console.log(century);
