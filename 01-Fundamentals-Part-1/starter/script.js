@@ -79,6 +79,7 @@ console.log(ageOren >= 18);
 const isLegalAge = ageOren >= 18;
 */
 
+/*
 const now = 2021;
 const ageOren = now - 1980;
 const ageValery = now - 1977;
@@ -95,3 +96,27 @@ console.log(x, y);
 
 const averageAge = (ageOren + ageValery) / 2;
 console.log(ageOren, ageValery, averageAge);
+*/
+
+/*
+const firstName = "Oren";
+const job = "developer";
+const birthYear = 1980;
+const year = 2021;
+
+// create sentence with concatenation
+const catSentence = "I'm " + firstName + ", a " + (year - birthYear) + " years old " + job + "!";
+
+console.log(catSentence);
+
+// create sentence with template literal
+const templateSentence = `I'm ${firstName}, a ${year - birthYear} years old ${job}!`
+console.log(templateSentence);
+
+// multi line string with backtics ``
+console.log(`string
+with
+multi
+line`);
+*/
+
