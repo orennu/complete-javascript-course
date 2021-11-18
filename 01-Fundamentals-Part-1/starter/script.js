@@ -274,3 +274,49 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 }
 */
 
+/*
+// the switch case
+const day = 'monday';
+
+console.log('### switch case ###');
+switch (day) {
+    case 'monday': // day === 'monday'
+        console.log('Feed the dogs');
+        console.log('Work on legs');
+        break;
+    case 'sunday':
+    case 'tuesday': // day === 'sunday' || day || 'tuesday'
+        console.log('Running practice');
+        break;
+    case 'wednesday':
+        console.log('Pick the car from garage');
+        break;
+    case 'thursday':
+        console.log('Do shopping');
+        break;
+    case 'friday':
+    case 'saturday':
+        console.log('Do nothing');
+        break;
+    default:
+        console.log('Not a valid day');
+}
+
+// mocking switch case with if / else if / else
+console.log('### if / else if / else ###')
+if (day === 'monday') {
+    console.log('Feed the dogs');
+    console.log('Work on legs');
+} else if (day === 'sunday' || day === 'tuesday') {
+    console.log('Running practice');
+} else if (day === 'wednesday') {
+    console.log('Pick the car from garage');
+} else if (day === 'thursday') {
+    console.log('Do shopping');
+} else if (day === 'friday' || day === 'saturday') {
+    console.log('Do nothing');
+} else {
+    console.log('Not a valid day');
+}
+*/
+
