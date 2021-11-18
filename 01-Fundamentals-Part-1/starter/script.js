@@ -1,4 +1,5 @@
 /*
+// values and variables
 let js = 'amazing';
 console.log(40 + 8 + 23 - 10);
 
@@ -12,6 +13,7 @@ console.log(firstName);
 */
 
 /*
+data types
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -36,6 +38,7 @@ console.log(typeof nul);
 */
 
 /*
+// let, const and var
 let age = 30;
 age = 31;
 
@@ -48,6 +51,7 @@ const job; // error
 */
 
 /*
+// basic operators
 // math operators
 const now = 2021;
 const ageOren = now - 1980;
@@ -80,6 +84,7 @@ const isLegalAge = ageOren >= 18;
 */
 
 /*
+// operator precedence
 const now = 2021;
 const ageOren = now - 1980;
 const ageValery = now - 1977;
@@ -99,6 +104,7 @@ console.log(ageOren, ageValery, averageAge);
 */
 
 /*
+// strings and template literals
 const firstName = "Oren";
 const job = "developer";
 const birthYear = 1980;
@@ -120,7 +126,8 @@ multi
 line`);
 */
 
-
+/*
+// if / else statements
 const age = 15;
 
 if (age >= 18) {
@@ -140,3 +147,68 @@ if (birthYear <= 2000) {
 }
 
 console.log(century);
+*/
+
+/*
+// type conversion and coercion
+// type conversion
+// conversion to number
+const inputYear = '1980';
+
+console.log(Number(inputYear), inputYear);
+console.log(inputYear + 18);
+console.log(Number(inputYear) + 18);
+
+console.log(Number("Oren"));
+console.log(typeof NaN);
+
+// conversion to string
+console.log(23, String(23));
+
+// type coercion
+console.log("I am " + 23 + " years old");
+console.log("23" - "10" - 3);
+console.log("23" + "10" + 3);
+console.log("23" * "2");
+console.log("23" / "2");
+
+let n = '1' + 1; // '11'
+n = n - 1; // 10
+console.log(n);
+
+const x = 2 + 3 + 4 + '5' // => 2 + 3 = 5 => 5 + 4 = 9 => 9 + '5' = '95'
+console.log(x);
+*/
+
+/*
+// truthy and falsy values
+// 5 falsy values: 0, '', undefined, null, NaN
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(''));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
+console.log(Boolean('Oren'));
+console.log(Boolean({}));
+
+let money = 0; // falsy
+// money = 1000; // truthy
+
+// conversion to truthy and falsy is done implictly by javascript by coercion
+if (money) {
+    console.log("don't spend it all");
+} else {
+    console.log("You should get a job!");
+}
+
+let height; // falsy
+// height = 191; // truthy
+
+console.log(typeof height);
+if (height) {
+    console.log('YAY! Height is defined');
+} else {
+    console.log('Height is UNDEFINED');
+}
+*/
+
