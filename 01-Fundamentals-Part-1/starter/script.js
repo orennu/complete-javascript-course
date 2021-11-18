@@ -212,3 +212,65 @@ if (height) {
 }
 */
 
+/*
+// equality operators
+let age = 18;
+// age = '18';
+
+// strict equality: true if value and type are the same (no type coercion)
+if (age === 18) console.log('You just became and adult (strict)');
+
+// loose equlaity: true if values are the same (type coercion)
+if (age == '18') console.log('You just became and adult (loose)');
+
+const favoriteNumber = Number(prompt("what's your favorite number?"));
+console.log(favoriteNumber);
+console.log(typeof favoriteNumber);
+
+if (favoriteNumber === 11) {
+    console.log('Cool! 11 is an amazing number!');
+} else if (favoriteNumber === 7) {
+    console.log('7 is also a cool number');
+} else if (favoriteNumber === 5) {
+    console.log('5 is also a cool number');
+} else {
+    console.log('Number is not 11 or 7 or 5');
+}
+
+// non equal
+if (favoriteNumber !== 11) console.log("why not 11?");
+*/
+
+/*
+// logical operators
+let hasDriversLicense = true; // A
+let hasGoodVision = true; // B
+
+console.log(`true AND true: ${hasDriversLicense && hasGoodVision}`);
+
+hasGoodVision = false;
+console.log(`true AND false: ${hasDriversLicense && hasGoodVision}`);
+console.log(`true OR false: ${hasDriversLicense || hasGoodVision}`);
+console.log(`not true: ${!hasDriversLicense}`);
+
+// hasGoodVision = true;
+
+console.log(`hasDriversLicense (${hasDriversLicense}) && hasGoodVision (${hasGoodVision})`);
+if (hasDriversLicense && hasGoodVision) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive");
+}
+
+let isTired = true;
+isTired = false;
+hasGoodVision = true;
+
+console.log(`hasDriversLicense (${hasDriversLicense}) && hasGoodVision (${hasGoodVision}) && !isTired (${!isTired})`)
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!");
+} else {
+    console.log("Someone else should drive");
+}
+*/
+
