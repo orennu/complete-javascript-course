@@ -320,3 +320,31 @@ if (day === 'monday') {
 }
 */
 
+/*
+// the conditional (ternary) operator
+// syntax: condition ? expression if true : expression if false
+let age = 23;
+// age = 16;
+age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to dring milk 🥛');
+
+const drink = age >= 18 ? 'wine 🍷' : 'milk 🥛';
+
+console.log(`I like to drink ${drink}`);
+
+// without the ternary operator we would do something like this
+let anotherDrink;
+
+if (age >= 18) {
+    anotherDrink = 'wine 🍷';
+} else {
+    anotherDrink = 'milk 🥛';
+}
+
+console.log(`I like to drink ${anotherDrink}`);
+
+// since ternary operator is an expression it can be used inside template literal
+const isBoy = false;
+console.log(`I played with ${isBoy ? 'James' : 'Anna'}`);
+*/
+
+
