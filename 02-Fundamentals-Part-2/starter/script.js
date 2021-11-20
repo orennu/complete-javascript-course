@@ -188,3 +188,44 @@ const ages = [calcAge(yearsArray[0]), calcAge(yearsArray[1]), calcAge(yearsArray
 
 console.log(ages);
 */
+
+
+// array methods
+const friends = ['Tomer', 'Arik', 'David', 'Mia'];
+
+// push - add element to end of array and return array new length
+let newLength = friends.push('Yulia');
+
+console.log(friends, newLength);
+
+// unshift - add element to begining of an array and return array new length
+newLength = friends.unshift('Gilad');
+
+console.log(friends, newLength);
+
+// pop - removes last element of an array and returns the removed element
+const poped = friends.pop();
+
+console.log(friends, poped);
+
+// shift - remove first element of an array and return the removed element
+const shifted = friends.shift();
+
+console.log(friends, shifted);
+
+// indexOf - return the first index of an element in array, if element not found returns -1
+const indexOfDavid = friends.indexOf('David');
+
+console.log(friends, indexOfDavid);
+console.log(friends, friends.indexOf('Bill'));
+
+// includes - returns true if element is included in array, otherwise returns false. uses strict equality (===)
+friends.push(11);
+const isDavidInFriends = friends.includes('David');
+const isBillInFriends = friends.includes('Bill');
+
+console.log(friends, isDavidInFriends, friends.includes(11), isBillInFriends, friends.includes('11'));
+
+if (friends.includes('Tomer')) {
+    console.log('You have a friend called Tomer');
+}
