@@ -115,7 +115,7 @@ const fruitProcessor = function (apples, oranges) {
 console.log(fruitProcessor(2, 3));
 */
 
-
+/*
 // reviewing functions
 const calcAge = (birthYear) => new Date().getFullYear() - birthYear; // arrow function
 
@@ -129,3 +129,62 @@ const getYearsUntilRetirement = function (birthYear) { // function expression
 
 console.log(getYearsUntilRetirement(1980));
 console.log(getYearsUntilRetirement(1940));
+*/
+
+/*
+// arrays intro
+// storing values into variables - not scalable and fun
+const friend1 = 'Tomer';
+const friend2 = 'Arik';
+const friend3 = 'David';
+const friend4 = 'Mia';
+
+// storing the values into an array - create array literally
+const friends = ['Tomer', 'Arik', 'David', 'Mia'];
+
+console.log(friends);
+
+// another way of creating an array
+const years = new Array(1980, 1990, 2000, 2010, 2020);
+
+console.log(years);
+
+// get element of an array
+console.log(friends[0]); // 1st element of friends array
+console.log(friends[2]); // 3rd elemnent of friends array
+
+// get length of array
+console.log(friends.length);
+
+// get last element of an array
+console.log(friends[friends.length - 1]);
+
+// change / mutate element in an array
+friends[2] = 'Jony';
+
+console.log(friends);
+
+// array elements are mutable but array declared with const is still not changeable
+// friends = ['Bob', 'Alice']; // this will raise an error
+
+// arrays can hold different types of values and even expressions
+const firstName = 'Oren';
+const oren = [firstName, 'Nudelman', new Date().getFullYear() - 1980, friends, 'developer'];
+
+console.log(oren);
+
+// exercise
+const calcAge = birthYear => new Date().getFullYear() - birthYear;
+
+const yearsArray = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(yearsArray[0]);
+const age2 = calcAge(yearsArray[1]);
+const ageLast = calcAge(yearsArray[yearsArray.length - 1]);
+
+console.log(age1, age2, ageLast);
+
+const ages = [calcAge(yearsArray[0]), calcAge(yearsArray[1]), calcAge(yearsArray[yearsArray.length - 1])]
+
+console.log(ages);
+*/
