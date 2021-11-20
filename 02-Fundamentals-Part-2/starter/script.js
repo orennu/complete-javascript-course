@@ -115,3 +115,17 @@ const fruitProcessor = function (apples, oranges) {
 console.log(fruitProcessor(2, 3));
 */
 
+
+// reviewing functions
+const calcAge = (birthYear) => new Date().getFullYear() - birthYear; // arrow function
+
+
+const getYearsUntilRetirement = function (birthYear) { // function expression
+    const age = calcAge(birthYear); // function calling another function
+    const yearsToRetirement = 65 - age;
+
+    return yearsToRetirement > 0 ? yearsToRetirement : -1; // return value using ternary operator
+}
+
+console.log(getYearsUntilRetirement(1980));
+console.log(getYearsUntilRetirement(1940));
