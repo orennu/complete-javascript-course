@@ -189,7 +189,7 @@ const ages = [calcAge(yearsArray[0]), calcAge(yearsArray[1]), calcAge(yearsArray
 console.log(ages);
 */
 
-
+/*
 // array methods
 const friends = ['Tomer', 'Arik', 'David', 'Mia'];
 
@@ -229,3 +229,51 @@ console.log(friends, isDavidInFriends, friends.includes(11), isBillInFriends, fr
 if (friends.includes('Tomer')) {
     console.log('You have a friend called Tomer');
 }
+*/
+
+/*
+// objects intro
+const orenArray = [
+    'Oren',
+    'Nudelman',
+    new Date().getFullYear() - 1980,
+    'developer',
+    [
+        'Tomer',
+        'John',
+        'Mia'
+    ]
+];
+
+// create object literally
+const oren = {
+    firstName: 'Oren',
+    lastName: 'Nudelman',
+    age: new Date().getFullYear() - 1980,
+    job: 'developer',
+    friends: ['Tomer', 'John', 'Mia']
+};
+
+console.log(oren);
+*/
+
+
+// retrieve values from objects - dot vs. bracket notation
+const oren = {
+    firstName: 'Oren',
+    lastName: 'Nudelman',
+    age: new Date().getFullYear() - 1980,
+    job: 'developer',
+    friends: ['Tomer', 'John', 'Mia']
+};
+
+console.log(oren);
+
+// get object property value using the dot notation
+console.log(oren.lastName);
+
+// get object property value using the bracket notation
+console.log(oren['lastName']);
+
+const nameKey = 'Name';
+console.log(oren['first' + nameKey], oren[`last${nameKey}`]);
