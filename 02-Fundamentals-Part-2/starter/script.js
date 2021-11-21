@@ -257,7 +257,7 @@ const oren = {
 console.log(oren);
 */
 
-
+/*
 // retrieve values from objects - dot vs. bracket notation
 const oren = {
     firstName: 'Oren',
@@ -277,3 +277,25 @@ console.log(oren['lastName']);
 
 const nameKey = 'Name';
 console.log(oren['first' + nameKey], oren[`last${nameKey}`]);
+
+const interestedIn = prompt('What do you want to know about Oren? Choose between firstName, lastName, age, job and friends');
+
+console.log(oren[interestedIn]);
+
+if (oren[interestedIn]) {
+    console.log(oren[interestedIn]);
+} else {
+    console.log('wrong request!');
+}
+
+// add properties to object
+oren.location = 'Israel';
+oren['twitter'] = '@orennu';
+
+console.log(oren);
+
+// challenge
+// "Oren has 3 friends and his best friend is called Tomer"
+
+console.log(`${oren.firstName} has ${oren.friends.length} friends and his best friend name is ${oren.friends[0]}`);
+*/
