@@ -360,3 +360,57 @@ for (let rep = 1; rep <= 10; rep++) {
 }
 */
 
+/*
+// looping arrays
+const orenArray = [
+    'Oren',
+    'Nudelman',
+    new Date().getFullYear() - 1980,
+    'developer',
+    [
+        'Tomer',
+        'John',
+        'Mia'
+    ],
+    true
+];
+
+const types = [];
+
+for (let i = 0; i < orenArray.length; i++) {
+    // reading from orenArray array
+    console.log(orenArray[i], typeof orenArray[i]);
+    // filling types array
+    // types[i] = typeof orenArray[i]; // method 1
+    types.push(typeof orenArray[i]); // method 2
+}
+
+console.log(types);
+
+const years = [1980, 1990, 2000, 2010, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(new Date().getFullYear() - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+// continue - exit the current iteration and continue to next one
+// break - stop the loop
+console.log('--- ONLY STRINGS ---');
+
+for (let i = 0; i < orenArray.length; i++) {
+    if (typeof orenArray[i] !== 'string') continue;
+
+    console.log(`${orenArray[i]} -> type: ${typeof orenArray[i]}`);
+}
+
+console.log('--- BREAK WITH NUMBER ---');
+for (let i = 0; i < orenArray.length; i++) {
+    if (typeof orenArray[i] === 'number') break;
+
+    console.log(`${orenArray[i]} -> type: ${typeof orenArray[i]}`);
+}
+*/
