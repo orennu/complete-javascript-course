@@ -299,3 +299,42 @@ console.log(oren);
 
 console.log(`${oren.firstName} has ${oren.friends.length} friends and his best friend name is ${oren.friends[0]}`);
 */
+
+/*
+// object methods
+const oren = {
+    firstName: 'Oren',
+    lastName: 'Nudelman',
+    birthYear: 1980,
+    job: 'developer',
+    friends: ['Tomer', 'John', 'Mia'],
+    hasDriversLicense: true,
+    // function as object property
+    calcAge: function () {
+        console.log(this);  // this keyword is pointing to the object where this resides (i.e. oren in this case)
+        this.age = new Date().getFullYear() - this.birthYear; // create new object property inside the object method
+        return this.age;
+    },
+    fullName: function () {
+        return `${this.firstName} ${this.lastName}`;
+    },
+    getSummary: function () {
+        this.summary = `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.hasDriversLicense ? 'a' : 'no'} driver's license`;
+        return this.summary;
+    }
+};
+
+// calling the object's function property
+console.log(oren.calcAge()); // need to call the calcAge at least once to create age property
+console.log(oren['age']); // now we can get the age property
+console.log(oren.age);
+console.log(oren.age);
+console.log(oren.age);
+console.log(oren.fullName());
+
+// challenge
+// "Oren is a 41 years old developer, and he has a/no driver's license"
+oren.getSummary();
+
+console.log(oren.summary);
+*/
