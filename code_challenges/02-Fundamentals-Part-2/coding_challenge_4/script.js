@@ -13,18 +13,19 @@ Bonus:
 4.3. Call the function with the 'totals' array
 */
 
+const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
 // task 1
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
 // task 2
 const tips = [];
 const totals = [];
 
-const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
-
 // task 3
 for (let i = 0; i < bills.length; i++) {
-    let tip = calcTip(bills[i]);
-    let total = bills[i] + tip;
+    const tip = calcTip(bills[i]);
+    const total = bills[i] + tip;
     // console.log(bills[i], tip, total);
 
     tips.push(tip);
