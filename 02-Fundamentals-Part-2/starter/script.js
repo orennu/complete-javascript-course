@@ -414,3 +414,34 @@ for (let i = 0; i < orenArray.length; i++) {
     console.log(`${orenArray[i]} -> type: ${typeof orenArray[i]}`);
 }
 */
+
+/*
+// looping backwards and nested loops
+const orenArray = [
+    'Oren',
+    'Nudelman',
+    new Date().getFullYear() - 1980,
+    'developer',
+    [
+        'Tomer',
+        'John',
+        'Mia'
+    ],
+    true
+];
+
+// backwards loop from last to first index
+for (let i = orenArray.length - 1; i >= 0; i--) {
+    console.log(i, orenArray[i]);
+}
+
+// nested loop
+// outer loop
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`----- START EXERCISE ${exercise} -----`);
+    // inner loop
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️`);
+    }
+}
+*/
