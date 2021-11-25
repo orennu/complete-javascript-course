@@ -5,7 +5,7 @@ const x = 23;
 const calcAge = birthYear => new Date().getFullYear() - birthYear;
 // console.log(calcAge(1980));
 
-// TODO BUG
+// TODO BUG GOOD_CODE BAD_CODE
 
 /*
 ///////////////////////////////////////
@@ -27,6 +27,8 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // - Find min value in temp array
 // - Subtract min from max (amplitude) and return it
 */
+
+/*
 const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // const temperatures = ['error', 3, -2, -10, -1, 'error', 9, 13, 'error', 19, 15, 14, 9, 5];
 // const temperatures = ['error', 'error', 'error', 'error', 'error', 'error'];
@@ -67,7 +69,9 @@ const findMaxMin = function (arr) {
 
 const amplitude = calcTempAmplitude(temperatures);
 console.log(amplitude);
+*/
 
+/*
 // PROBLEM 2:
 // Function should now receive 2 arrays of temps
 
@@ -93,3 +97,4 @@ const temperatures2 = [3, -2, -6, -1, 'error', 9, 13, 17, 25, 14, 9, 'error'];
 const amplitude2 = calcTempAmplitude2(temperatures1, temperatures2);
 
 console.log(amplitude2);
+*/
