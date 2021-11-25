@@ -98,3 +98,59 @@ const amplitude2 = calcTempAmplitude2(temperatures1, temperatures2);
 
 console.log(amplitude2);
 */
+
+/*
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+    // C) FIX BUG // was value: prompt('Degrees celsius:') so value was a string
+    value: Number(prompt('Degrees celsius:')),
+  };
+
+  // B) FIND BUG
+  console.log(measurement);
+  console.table(measurement);
+  // console.log(measurement.value);
+  // console.warn(measurement.value);
+  // console.error(measurement.value);
+  const kelvin = measurement.value + 273;
+
+  return kelvin;
+};
+
+// A) IDENTIFY BUG
+console.log(measureKelvin());
+*/
+
+/*
+// using a debugger
+const calcTempAmplitudeBug = function (t1, t2) {
+  const temps = t1.concat(t2);
+  console.log(temps);
+
+  // B) FIND BUG
+  // let max = 0;
+  // let min = 0;
+  // C) FIX BUG
+  let max = temps[0];
+  let min = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const curTemp = temps[i];
+    if (typeof curTemp !== 'number') continue;
+
+    // debugger; set breaking point from code
+    if (curTemp > max) max = curTemp;
+    if (curTemp < min) min = curTemp;
+  }
+
+  console.log(max, min);
+  return max - min;
+};
+
+const amplitudeBug = calcTempAmplitudeBug([3, 5, 1], [9, 4, 5]);
+
+// A) IDENTIFY BUG
+console.log(amplitudeBug);
+*/
