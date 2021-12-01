@@ -1,5 +1,6 @@
 'use strict';
 // scoping
+console.log('=== this is scoping ===');
 
 // calcAge is defined in the global scope (aka global function)
 function calcAge(birthYear) {
