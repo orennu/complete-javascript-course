@@ -1,5 +1,6 @@
 'use strict';
 // this keyword pitfalls
+console.log('=== regular vs. arrow functions ===');
 
 // this will cause greet method inside person object to use 'George' as the value of this.first, because variables decalred with var keyword are added as global object properties
 var first = 'George';
