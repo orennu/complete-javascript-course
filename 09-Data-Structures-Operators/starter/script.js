@@ -1,5 +1,6 @@
 'use strict';
 
+console.log('=== destructuring arrays ===');
 // the naive way of unpacking array elements to seperate variables
 const arr = [2, 3, 4];
 const a = arr[0];
@@ -23,10 +24,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
   openingHours: {
     thu: {
       open: 12,
@@ -40,6 +37,22 @@ const restaurant = {
       open: 0, // Open 24 hours
       close: 24,
     },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  // destructuring arguments on function
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
   },
 };
 
@@ -80,3 +93,51 @@ console.log('nested destructuring: ', i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9];
 
 console.log('destructuring with default values: ', p, q, r);
+
+// destructuring object
+console.log('=== destructuring objects ===');
+const { name, openingHours, categories } = restaurant;
+
+console.log('destructuring object: ', name, openingHours, categories);
+
+// rename unpacked variables
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+
+console.log('rename unpacked variables: ', restaurantName, hours, tags);
+
+// set default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+
+console.log('set default values: ', menu, starters);
+
+// mutating variables
+let v = 111;
+let w = 999;
+const obj = { v: 23, w: 7, u: 14 };
+({ v, w } = obj);
+
+console.log('mutating variables: ', v, w);
+
+// nested objects
+const {
+  fri: { open: openHour, close: closeHour },
+} = openingHours;
+console.log('nested object destructuring: ', openHour, closeHour);
+
+// calling object method that unpacks properties from object passed as argument
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+
+// using default values
+restaurant.orderDelivery({
+  address: 'Via del Sole, 21',
+  starterIndex: 1,
+});
