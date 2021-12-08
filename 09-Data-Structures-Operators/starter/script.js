@@ -1,5 +1,5 @@
 'use strict';
-
+/*
 console.log('=== destructuring arrays ===');
 // the naive way of unpacking array elements to seperate variables
 const arr = [2, 3, 4];
@@ -93,7 +93,9 @@ console.log('nested destructuring: ', i, j, k);
 const [p = 1, q = 1, r = 1] = [8, 9];
 
 console.log('destructuring with default values: ', p, q, r);
+*/
 
+/*
 // destructuring object
 console.log('=== destructuring objects ===');
 const { name, openingHours, categories } = restaurant;
@@ -141,3 +143,88 @@ restaurant.orderDelivery({
   address: 'Via del Sole, 21',
   starterIndex: 1,
 });
+*/
+
+// the spread operator (...)
+console.log('=== the spread operator (...) ===');
+
+const arr = [7, 8, 9];
+const badNewArray = [1, 2, arr[0], arr[1], arr[2]];
+
+console.log(badNewArray);
+
+// the spread operator spreads the array elements
+const newArr = [1, 2, ...arr];
+
+console.log(newArr); // [1, 2, 7, 8, 9]
+console.log(...newArr); // 1 2 7 8 9
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
+};
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
+// shallow copy of array
+const mainMenuCopy = [...restaurant.mainMenu];
+
+// join 2 (or more) arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+
+// iterable are arrays, strings, maps, sets but NOT objects
+const str = 'Oren';
+const letters = [...str, ' ', 'N.'];
+console.log(letters);
+
+// real world example
+const ingredients = [
+  prompt("Let's make pasta! ingredient 1?"),
+  prompt('ingredient 2?'),
+  prompt('ingredient 3?'),
+];
+
+console.log(ingredients);
+
+restaurant.orderPasta(...ingredients);
+
+// spread objects
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+
+console.log(newRestaurant);
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+
+console.log(restaurant.name);
+console.log(restaurantCopy.name);
