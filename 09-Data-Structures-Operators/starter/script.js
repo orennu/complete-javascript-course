@@ -315,3 +315,91 @@ add(...x);
 restaurant.orderPizza('mushrum', 'onion', 'olives');
 restaurant.orderPizza('pineapple');
 */
+
+/*
+// short circuiting (&& and ||)
+console.log('=== short circuiting (&& and ||) ===');
+
+console.log('=== short circuiting OR (||) ===');
+// logical operator can:
+// - use ANY date type
+// - return ANY data type
+// - short-circuiting evaluation
+
+// short-circuiting evaluation || - if the left operand is truthy JS will return it and will not evaluate the right operand
+console.log(3 || 'Oren'); // 3 is truthy so it will be returned and 'Oren' will not be evaluated
+
+console.log('' || 'Oren'); // Oren
+console.log(true || 0); // true
+console.log(undefined || null); // null
+console.log(null || undefined); // undefined
+console.log(false || 0); // 0
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // Hello
+// so short circuiting will stop evaluation on 1st truthy operand starting from left to right and return 1st truthy value or last value if they are all falsy
+
+const restaurant = {
+  name: 'Classico Italiano',
+  location: 'Via Angelo Tavanti 23, Firenze, Italy',
+  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
+
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log(mainIngredients);
+    console.log(otherIngredients);
+  },
+};
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1); // 10
+
+restaurant.numGuests = 23;
+const guests2 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests2); // 23
+
+const guests3 = restaurant.numGuests || 10;
+console.log(guests3); // 23
+
+console.log('=== short circuiting AND (&&) ===');
+// short circuiting AND works the oposite of the OR operator, meaning it will stop evaluation on 1st falsy value from left to right and return it or return last value if they are all truthy
+
+console.log(0 && 'Oren'); // 0
+console.log(7 && 'Oren'); // Oren
+console.log('Hello' && 23 && null && 'Oren'); // null
+console.log('Hello' && 23 && true && 'Oren'); // Oren
+
+// practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrums', 'spinach');
+}
+
+restaurant.orderPizza && restaurant.orderPizza('mushrum', 'spinach');
+*/
+
+// the nullish coalescing operator (??)
+console.log('=== the nullish coalescing operator (??) ===');
