@@ -61,7 +61,7 @@ const [first, second] = restaurant.categories;
 
 console.log('take first 2 elements: ', first, second);
 
-// take 1sta and 3rd element
+// take 1st and 3rd element
 const [el1, , el3] = restaurant.categories;
 
 console.log('take 1st and 3rd element: ', el1, el3);
